@@ -10,7 +10,7 @@ public class fileParse {
     public static int[][] ruleGen(){
         ArrayList<String> bagNames = new ArrayList<String>();
         ArrayList<String> rules = new ArrayList<String>();
-        File file=new File("G:\\My Drive\\Drexel CS program\\adventOfCode\\2020-7\\src\\rules.txt");
+        File file=new File("C:\\Users\\carmi\\Documents\\git projects\\AoC2020day7\\rules126.txt");
         String line;
         String[] splitLine;
 
