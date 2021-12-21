@@ -28,7 +28,7 @@ public class fileParse {
         }
 
         int dimension = bagNames.size();
-        int ruleArray[][] = new int[dimension][dimension]; //1st row, 1st col reservef for target ID
+        int ruleArray[][] = new int[dimension][dimension]; 
         int bags=0;
         int spaces=0;
         int bagIDstart=0;
