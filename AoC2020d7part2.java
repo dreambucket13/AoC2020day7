@@ -23,6 +23,7 @@ public class AoC2020d7part2 {
 
         Stack<Integer> branch = new Stack<Integer>();
         Stack<Integer> multiples = new Stack<Integer>();
+        Stack<Integer> rowSums = new Stack<Integer>();
         //int row = 479; //hard coded to start at shiny gold
         //int row = 4;
         int row = 0;
@@ -39,17 +40,23 @@ public class AoC2020d7part2 {
     
         while(!branch.isEmpty()){
             branch.pop(); //pop off inital dummy value and prior branch value
-            multiples.pop();
+            //multiples.pop();
             rowSum = 0;
+            multiple = 1;
 
             for (col = 0; col < rules[row].length;col++){
 
                 rowSum = rowSum + rules[row][col];
+                rowSums.push(rowSum);
 
                 if (rules[row][col] != 0){
                     branch.push(col); 
                     multiples.push(rules[row][col]);
                 }
+            }
+
+            for (Integer m : multiples){
+                multiple = m* multiple;
             }
 
             totalBags = totalBags + multiple*rowSum;
