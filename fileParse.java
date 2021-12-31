@@ -36,7 +36,7 @@ public class fileParse {
         String bagID;
         boolean lineEnd = false;
         int bagIndex=0;
-        String target = "shiny gold";
+        String target = "shiny gold"; //someday avoid hardcoding target
 
         for (String e : bagNames){
         
