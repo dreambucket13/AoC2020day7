@@ -28,7 +28,7 @@ public class AoC2020d7part2 {
         //int row = 4;
         int row = 0;
         int col = 0;
-        int totalBags = 0; //start with 1 shiny gold
+        int totalBags = 0; 
         int multiple = 1;
         int rowSum = 0;
 

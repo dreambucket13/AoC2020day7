@@ -10,7 +10,7 @@ public class fileParse {
     public static int[][] ruleGen(){
         ArrayList<String> bagNames = new ArrayList<String>();
         ArrayList<String> rules = new ArrayList<String>();
-        File file=new File("C:\\Users\\carmi\\Documents\\git projects\\AoC2020day7\\rules126.txt");
+        File file=new File("C:\\Users\\carmi\\Documents\\git projects\\AoC2020day7\\rules.txt");
         String line;
         String[] splitLine;
 
@@ -92,7 +92,22 @@ public class fileParse {
         return ruleArray;
     }
 
-   
+    public static int[] conv1D2D(int i, int[][] r){
+
+        int row = i;
+        int col = 0;
+        int[][] twoD = r;
+        int[] oneD = new int[twoD[row].length];
+
+        for (col = 0; col < twoD[row].length; col ++){
+
+            oneD[col] = twoD[row][col];
+
+        }
+
+        return oneD;
+
+    }
 
 }
 
