@@ -10,7 +10,7 @@ public class AoC2020d7part2 {
     public static void main(String args[]){
 
         int col = 0;
-        int totalBags = -1; 
+        int totalBags = -1; //starting with -1, problem doesn't count the first bag
         int bagNum = 479;         //hard coded to start at shiny gold
         
         final int[][] rules = fileParse.ruleGen();
