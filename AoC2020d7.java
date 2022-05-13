@@ -9,29 +9,7 @@ import java.util.Stack;
 public class AoC2020d7 {
     public static void main(String args[]){
         
-        final int[][] rules = fileParse.ruleGen();
-
-        // System.out.printf("%d%n",rules.length);
-        // System.out.printf("%d%n",rules[1].length);
-        
-        // for (int row =0;row<rules.length;row++){
-        //     for (int col = 0; col < rules[row].length;col++){
-        //         System.out.printf("%d ",rules[row][col]);
-        //     }
-        //     System.out.println();
-        // }
-
-        // final int[][] rules = {{0,0,1,2,0,0,0,0,0},
-        //                         {0,0,3,4,0,0,0,0,0},
-        //                         {0,0,0,0,1,0,0,0,0},
-        //                         {0,0,0,0,2,0,0,9,0}, 
-        //                         {0,0,0,0,0,1,2,0,0},
-        //                         {0,0,0,0,0,0,0,3,4},
-        //                         {0,0,0,0,0,0,0,5,6},
-        //                         {0,0,0,0,0,0,0,0,0},
-        //                         {0,0,0,0,0,0,0,0,0}};
-
-
+        final int[][] rules = fileParse.ruleGen(args[0]);
 
         boolean targetFound = false;
         int numShinyGold = 0;
@@ -41,6 +19,7 @@ public class AoC2020d7 {
         ArrayList<Integer> shinyGolds = new ArrayList<Integer>();
         ArrayList<Integer> tree = new ArrayList<Integer>();
         Stack<Integer> branch = new Stack<Integer>();
+        int shinyGoldIndex = 479;
 
         for (bag = 0; bag < rules.length; bag++){
 
@@ -68,7 +47,7 @@ public class AoC2020d7 {
             targetFound = false;
             for (Integer i : tree){
                 //System.out.printf("Branch %d, Searching bag %d%n",bag,i);
-                if (rules[i][479]!=0 && !targetFound){ //target is hard coded. target is 4 in the smoke test, 479 in real puzzle
+                if (rules[i][shinyGoldIndex]!=0 && !targetFound){ // target is 4 in the smoke test, 479 in real puzzle
                     targetFound = true;
                     shinyGolds.add(bag);
                     numShinyGold++;

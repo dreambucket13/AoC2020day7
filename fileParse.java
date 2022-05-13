@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class fileParse {
 
-    public static int[][] ruleGen(){
+    public static int[][] ruleGen(String path){
         ArrayList<String> bagNames = new ArrayList<String>();
         ArrayList<String> rules = new ArrayList<String>();
-        File file=new File("C:\\Users\\carmi\\Documents\\git projects\\AoC2020day7\\rules.txt");
+        File file=new File(path);
         String line;
         String[] splitLine;
 
@@ -36,7 +36,6 @@ public class fileParse {
         String bagID;
         boolean lineEnd = false;
         int bagIndex=0;
-        String target = "shiny gold"; //someday avoid hardcoding target
 
         for (String e : bagNames){
         
